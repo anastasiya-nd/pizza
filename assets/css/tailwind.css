@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+html, body {
+  font-weight: 500;
+  font-family: "Montserrat";
+  @apply text-text bg-body;
+}
+* {
+  outline: none!important;
+}
+
+.swiper-pagination-1{
+  position: absolute;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  bottom: 54px !important;
+  width: auto !important;
+  left: 0 !important;
+  bottom: 20px !important;
+
+  @screen md {
+    bottom: 30px !important;
+  }
+  @screen 2xl {
+    bottom: 54px !important;
+  }
+}
+
+.pagination-item, .swiper-pagination-bullet, .swiper-pagination-bullet-active-next-next {
+  transform: scale(1) !important;
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #fff !important;
+  margin-right: 20px;
+  opacity: 1 !important;
+}
+
+.pagination-item:hover, .swiper-pagination-bullet:hover, .swiper-pagination-bullet-active-next-next:hover {
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  background-color: #FFC52F !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.title {
+  @apply font-bold text-xl mb-5;
+  @screen sm{
+    @apply font-bold text-2xl;
+  }
+  @screen lg {
+    @apply font-bold text-3xl mb-8;
+  }
+  @screen xl {
+    @apply font-bold text-5xl mb-8;
+  }
+  @screen 2xl {
+    @apply font-bold text-6xl mb-10;
+  }
+}
+
+.padding {
+  @apply py-8;
+  @screen md{
+    @apply py-10;
+  }
+  @screen lg {
+    @apply py-12;
+  }
+  @screen xl {
+    @apply py-16;
+  }
+  @screen 2xl {
+    @apply py-20;
+  }
+}
+
+.container {
+  max-width: 320px;
+  @apply px-2.5;
+
+  @screen sm {
+    @apply px-0;
+    max-width: 375px;
+  }
+  @screen md {
+    @apply px-0;
+    max-width: 620px;
+  }
+  @screen lg {
+    @apply px-0;
+    max-width: 860px;
+  }
+  @screen xl {
+    @apply px-0;
+    max-width: 1040px;
+  }
+  @screen 2xl {
+    @apply px-0;
+    max-width: 1400px;
+  }
+}
+
+.menu-container {
+  max-width: 320px;
+  @apply px-2.5 mx-auto;
+
+  @screen sm {
+    @apply px-0;
+    max-width: 340px;
+  }
+  @screen md {
+    @apply px-0;
+    max-width: 620px;
+  }
+  @screen lg {
+    @apply px-0 mr-0;
+    max-width: 100%;
+  }
+}
+
+.column-count{
+  column-count: 4;
+  column-gap: 20px;
+
+  @screen md{
+    column-count: 2;
+    column-gap: 20px;
+  }
+  @screen lg{
+    column-count: 3;
+    column-gap: 20px;
+  }
+  @screen xl{
+    column-count: 4;
+    column-gap: 40px;
+  }
+}
+
+.ul li::before{
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #292F36;
+  margin: 5px 10px 0 0;
+}
+.ul li{
+  display: flex;
+}
+
